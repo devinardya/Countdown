@@ -11,8 +11,13 @@ button.addEventListener("click", ()=>{
     let minsInput = parseInt(inputMins.value);
     let secInput = parseInt(inputSec.value);
 
-    countdownSecond(hourInput, minsInput, secInput);
+    console.log(hourInput, minsInput, secInput);
 
+    if (Number.isNaN(hourInput) || Number.isNaN(minsInput) || Number.isNaN(secInput)){
+        console.log("this is NaN")
+    } else {
+        countdownSecond(hourInput, minsInput, secInput);
+    }
 })
 
 
@@ -71,14 +76,14 @@ function countdownSecond(h, m, s){
         setInterval( () => {
         s--
         second.textContent = s;
-     
+    
         
         if(s < 10){
             second.textContent = "0"+s;
             
         }
-      
-        if (s === 0){
+    
+        if (s < 0){
             console.log(s);
             minute.textContent = m;
             if(m < 10){
@@ -88,7 +93,7 @@ function countdownSecond(h, m, s){
             }
             s = 59;
             m--;
-       
+    
             countdownSecond(h, m, s);
             
         } 
@@ -96,7 +101,7 @@ function countdownSecond(h, m, s){
 
         }, countdownThousand(1))  
 
-       
+    
         if (h <= -1 && m <= -1 && s === 59){
             console.log("Countdown Finished");
             clock.style.display = "none"
@@ -108,8 +113,6 @@ function countdownSecond(h, m, s){
         }
         
     }
-    
-
 
 }
 
