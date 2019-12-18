@@ -15,12 +15,16 @@ p, h2, h1, span, a, li, ul{
     left: 50%;
     margin: 0;
     transform: translate(-50%, -50%);
-    border: 3px dotted cadetblue;
+    border: 3px dotted rgb(158, 113, 54);
     display: none;
     width: 400px;
     height: 150px;
     text-align: center;
     padding-top: 70px;
+}
+
+input{
+    color: cadetblue;
 }
 
 .input{
@@ -37,6 +41,7 @@ span{
     padding: 0 10px;
     position: relative;
     top: 0px;
+    color: cadetblue;
 }
 
 .inputbox{
@@ -51,7 +56,7 @@ span{
 .inputbox h2{
     font-size: 40px;
     text-align: center;
-    color: cadetblue;
+    color: rgb(158, 113, 54);
     margin-bottom: 0px;
 }
 
@@ -65,7 +70,7 @@ button{
     height: 40px;
     display: block;
     margin: auto;
-    background-color: cadetblue;
+    background-color: rgb(158, 113, 54);
     color: #fff;
     border: none;
 }
@@ -76,7 +81,7 @@ button{
     left: 50%;
     margin: 0;
     transform: translate(-50%, -50%);
-    border: 3px dotted cadetblue;
+    border: 3px dotted rgb(158, 113, 54);
     display: none;
     padding: 50px;
     font-size: 35px;
@@ -85,4 +90,5 @@ button{
 
 .finishbox h2{
     margin-top: 0px;
+    color: cadetblue;
 }
